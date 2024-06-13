@@ -20,6 +20,15 @@ body {
     font: .85em Prompt, sans-serif;
 }
 
+a{
+    color: #6bb7df;
+    text-decoration: underline;
+}
+
+a:hover{
+    color: #7e274b;
+}
+
 h1 {
     color: #7e274b;
     font: bold 4em Prompt, sans-serif;
@@ -38,6 +47,15 @@ h1 {
 
 .image img {
     width: 100%;
+    -webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.image:hover img {
+    -webkit-transform: scale(1);
+	transform: scale(1);
 }
 
 .description {
