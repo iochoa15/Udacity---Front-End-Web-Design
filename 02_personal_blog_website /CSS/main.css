@@ -1,0 +1,12 @@
+/* main.css */
+
+@import url('layout.css');
+@import url('typography.css');
+@import url('colors.css');
+@import url('articles.css');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

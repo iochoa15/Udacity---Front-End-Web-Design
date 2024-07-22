@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,400;1,700&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cinzel&family=Didact+Gothic&display=swap');
+
+
+
+#normalcopylink a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#listtext {
+  margin: 10px;
+}
+
+#listtext li {
+  margin-top: 10px;
+}
+
+
+#middleimage {
+  margin-top: 5%;
+}
+
+
+a:link {
+  color: #06A7BD;
+}
+
+a:visited {
+  color: #06A7BD;
+}
+
+a:hover {
+  color: #085BBC;
+}
+
+#nav a {
+  color: #ffe4a1;
+  text-decoration: underline;
+}
+
+#nav a:hover {
+  color: #adb1b5;
+}
+
+#tw:hover {
+  mix-blend-mode: screen;
+}
+
+.byline ul {
+  margin-top: -10px;
+  margin-left: 5%;
+  padding-left: 0;
+  list-style: none;
+}
+
+.byline li {
+  display: inline-block;
+  color: #8E31AE;
+  margin-right: 5%;
+}
+
+.author-info {
+  display: flex;
+  background-color: #e4e4e4;
+  color: #FFFFFF;
+  margin: 5%;
+  border-radius: 20px;
+}
+
+.author-info p {
+  color: #5d5d5d;
+  font-size: .8em;
+  padding: 5%;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-items: center;
+}
+
+.author {
+  width: 15%;
+  margin-left: 2%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#normalcopylink {
+  width: 90%;
+}
+
+.buttons ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10%;
+  padding-left: 0;
+  list-style: none;
+
+}
+
+.buttons li {
+  color: #06A7BD;
+  list-style: none;
+  display: inline-block;
+  font-weight: 600;
+  background-color: #FFFFFF;
+  border: 2px solid #06A7BD;
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  width: auto;
+}
+
+.buttons li:hover {
+  color: #fff;
+  background-color: #06A7BD;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  color: #513da8;
+  font-size: 14px;
+  padding: 8px;
+  text-align: center;
+}
+
+
+.article_card {
+  display: grid;
+  grid-template-columns: 100%;
+  width: clamp(15rem, calc(15rem + 2vw), 22rem);
+  overflow: hidden;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: .5em;
+  background: #ebebeb;
+}
+
+
+
+.sidebarlinks li {
+  list-style-type: none;
+  margin-left: -20px;
+}
+
+.smwrapper {
+  margin-left: 5%;
+  margin-bottom: -5%;
+}
+
+.smwrapper p {
+  margin-left: -5%;
+}
+
+.smwrapper .icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  display: inline-block;
+  align-items: center;
+  color: #085BBC;
+}
+
+a.icon.facebook {
+  padding-right: 0;
+  width: 20px;
+}
+
+a.icon.twitter {
+  padding-right: 0;
+  width: 30px;
+}
+
+a.icon.linkedin {
+  padding-right: 0;
+  width: 20px;
+}
+
+.smwrapper .tooltip {
+  position: absolute;
+  opacity: 0;
+}
+
+.smwrapper .facebook:hover,
+.smwrapper .facebook:hover .tooltip,
+.smwrapper .facebook:hover .tooltip::before {
+  color: #06A7BD;
+}
+
+.smwrapper .twitter:hover,
+.smwrapper .twitter:hover .tooltip,
+.smwrapper .twitter:hover .tooltip::before {
+  color: #06A7BD;
+}
+
+.smwrapper .linkedin:hover,
+.smwrapper .linkedin:hover .tooltip,
+.smwrapper .linkedin:hover .tooltip::before {
+  color: #06A7BD;
+}
+
+.articlecontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: auto;
+  gap: 2rem;
+  margin: 0%;
+  justify-items: center;
+  grid-template-areas:
+    "hd"
+    "main"
+    "sd"
+    "ft";
+}
+
+.story_container {
+  display: grid;
+  grid-template-columns: 100%;
+  place-items: center;
+}
+
+.sidearea {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.story_container {
+  grid-area: main;
+}
+
+.sidearea {
+  grid-area: sd;
+}
+
+@media(min-width: 1200px) {
+  .articlecontainer {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin: 0%;
+    margin-top: 3%;
+    grid-template-areas:
+      "hd hd"
+      "main sd"
+      "ft ft";
+    justify-items: left;
+  }
+
+  article img {
+    max-width: 90%;
+    border-radius: 1em;
+    margin-left: 5%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .sidearea {
+    display: flex;
+    grid-template-columns: 80%;
+  }
+
+  .sidearea {
+    margin-left: 2%;
+  }
+}
