@@ -27,14 +27,14 @@ const orange = {
 };
 const strawberry = {
   name: "Strawberry",
-  price: 0.3,
+  price: 0.25,
   quantity: 0,
   productId: 3,
   image: "images/strawberry.jpg",
 };
 const cherry = {
   name: "Cherry",
-  price: 0.5,
+  price: 0.3,
   quantity: 0,
   productId: 4,
   image: "images/cherry.jpg",
@@ -180,6 +180,8 @@ function cartTotal() {
 
 function emptyCart() {
   cart.length = 0;
+  drawCart(); // Redraw the cart to reflect changes
+  drawCheckout(); // Redraw the checkout to reflect changes
 }
 
 /* Create a function named pay that takes in an amount as an argument
@@ -188,11 +190,25 @@ function emptyCart() {
   - pay will return a positive number if money should be returned to customer
   Hint: cartTotal function gives us cost of all the products in the cart  
 */
+let totalPaid = 0;
 
 function pay(amount) {
+  totalPaid += amount;
   const total = cartTotal();
-  return amount - total;
+  const change = totalPaid - total;
+  
+  if (change >= 0) {
+      // Payment is sufficient
+      const result = change;
+      totalPaid = 0; // Reset totalPaid for next transaction
+      emptyCart(); // Clear the cart 
+      return result;
+  } else {
+      // Payment is insufficient
+      return change;
+  }
 }
+
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
 

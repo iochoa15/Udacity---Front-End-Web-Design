@@ -31,7 +31,7 @@ function drawCart() {
                 <h3>${element.name}</h3>
                 <p>price: ${currencySymbol}${element.price}</p>
                 <p>quantity: ${element.quantity}</p>
-                <p>total: ${currencySymbol}${itemTotal}</p>
+                <p>total: ${currencySymbol}${itemTotal.toFixed(2)}</p>
                 <button class="qup">+</button>
                 <button class="qdown">-</button>
                 <button class="remove">remove</button>
@@ -53,7 +53,7 @@ function drawCheckout() {
     let cartSum = cartTotal();
 
     let div = document.createElement('div');
-    div.innerHTML = `<p>Cart Total: ${currencySymbol}${cartSum}`;
+    div.innerHTML = `<p>Cart Total: ${currencySymbol}${cartSum.toFixed(2)}`;
     checkout.append(div);
 }
 
@@ -128,7 +128,7 @@ document.querySelector('.pay').addEventListener('click', (e) => {
         document.querySelector('.received').value = '';
         div.innerHTML = `
             <p>Cash Received: ${currencySymbol}${amount}</p>
-            <p>Remaining Balance: ${cashReturn}$</p>
+            <p>Remaining Balance: ${currencySymbol}${Math.abs(cashReturn).toFixed(2)}</p>
             <p>Please pay additional amount.</p>
             <hr/>
         `;
@@ -139,22 +139,22 @@ document.querySelector('.pay').addEventListener('click', (e) => {
 
 /* Standout suggestions */
 /* Begin remove all items from cart */
-// function dropCart(){
-//     let shoppingCart = document.querySelector('.empty-btn');
-//     let div = document.createElement("button");
-//     div.classList.add("empty");
-//     div.innerHTML =`Empty Cart`;
-//     shoppingCart.append(div);
-// }
-// dropCart();
+function dropCart(){
+    let shoppingCart = document.querySelector('.empty-btn');
+    let div = document.createElement("button");
+    div.classList.add("empty");
+    div.innerHTML =`Empty Cart`;
+    shoppingCart.append(div);
+}
+dropCart();
 
-// document.querySelector('.empty-btn').addEventListener('click', (e) => {
-//     if (e.target.classList.contains('empty')){
-//         emptyCart();
-//         drawCart();
-//         drawCheckout();
-//     }
-// })
+document.querySelector('.empty-btn').addEventListener('click', (e) => {
+    if (e.target.classList.contains('empty')){
+        emptyCart();
+        drawCart();
+        drawCheckout();
+    }
+})
 /* End all items from cart */
 
 /* Begin currency converter */
